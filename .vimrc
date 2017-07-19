@@ -27,6 +27,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 map <C-n> :NERDTreeToggle<CR>
+map oo O<Esc>
 
 if (exists('+colorcolumn'))
   set colorcolumn=80
