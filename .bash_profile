@@ -2,12 +2,28 @@ alias ll='ls -lia'
 alias l='ls -l'
 alias yaml='yamllint'
 alias cleands="find . -type f -name '*.DS_Store' -ls -delete"
+alias h='history'
+alias prettyjson='python -m json.tool'
+
+# history
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTCONTROL=ignoreboth:erasedups
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+# z
+. ~/.my_z/z/z.sh
 
 # My Git aliases
 alias gs='git status'
 alias gco='git checkout'
 alias gaa='git add .'
 alias gcm='git commit -m'
+alias gpull='git pull'
+alias gpush='git push'
 
 function format_git_alias() {
 	awk '{$1=""; print " " $0 }'
@@ -20,7 +36,12 @@ function gh() {
 	alias gco | format_git_alias
 	alias gaa | format_git_alias
 	alias gcm | format_git_alias
+	alias gpull | format_git_alias
+	alias gpush | format_git_alias
 }
+
+# Docker
+alias d=docker
 
 # get current branch in git repo
 function parse_git_branch() {
