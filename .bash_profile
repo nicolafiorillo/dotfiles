@@ -6,9 +6,9 @@ alias h='history'
 alias prettyjson='python -m json.tool'
 
 # history
-HISTSIZE=1000
-HISTFILESIZE=2000
-HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=1000
+export HISTFILESIZE=2000
+export HISTCONTROL=ignoreboth:erasedups
 
 # asdf
 . $HOME/.asdf/asdf.sh
